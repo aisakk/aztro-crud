@@ -13,4 +13,5 @@ Para correr el proyecto debe ejecutar los siguientes comandos
 -  npm install
 - Verificar el .env para la base de datos actualmente tiene por nombre (aztro-crud) debe ser Mysql
 -  php artisan migrate
+- npm run dev
 - php artisan serve
