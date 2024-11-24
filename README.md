@@ -9,8 +9,8 @@
 
 ## About Project
 Para correr el proyecto debe ejecutar los siguientes comandos
-    -composer install
-    -npm install
-    -Verificar el .env para la base de datos actualmente tiene por nombre (aztro-crud) debe ser Mysql
-    -php artisan migrate
-    -php artisan serve
+    - composer install
+    - npm install
+    - Verificar el .env para la base de datos actualmente tiene por nombre (aztro-crud) debe ser Mysql
+    - php artisan migrate
+    - php artisan serve
