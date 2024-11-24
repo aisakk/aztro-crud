@@ -27,7 +27,14 @@ const submit = () => {
     }
   });
 };
-
+const deleteComment = (commentId, postId) => {
+  router.delete(`/post/comments/${commentId}`, {
+    data: {postId},
+    onSuccess: () => { 
+      location.reload();
+    }
+  })
+}
 const closeNotification = () => {
   successMessage.value = null;
 };
@@ -68,6 +75,12 @@ const closeNotification = () => {
                       <div v-for="comment in comments" :key="comment.id" class="mb-4 p-4 border rounded shadow">
                         <p class="text-gray-700">{{ comment.content }}</p>
                         <p class="text-gray-500">{{ comment.created_at }}</p>
+                        <button
+                        @click="deleteComment(comment.id, posts.id)"
+                        class="mt-4 px-4 py-2 bg-red-500 text-white font-semibold rounded hover:bg-blue-600"
+                      >
+                        Eliminar
+                      </button>
                       </div>
                     </div>
                 </div>

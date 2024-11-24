@@ -36,6 +36,11 @@ Route::middleware('auth')->group(function () {
 
     //Ruta ShowDetail donde se suben los comentarios
     Route::post("/posts/comments", [PostController::class, 'storeComment'])->name('posts.comment');
+
+    //Eliminar Post
+    Route::delete("/post/{id}", [PostController::class, 'deletePost'])->name('delete.post');
+    //Eliminar Comentarios
+    Route::delete("/post/comments/{id}", [PostController::class, 'deleteComment'])->name('delete.comment');
     //Projects
     Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
 });

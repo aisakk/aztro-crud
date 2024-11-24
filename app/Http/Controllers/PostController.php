@@ -76,4 +76,16 @@ class PostController extends Controller
 
        return redirect()->route('posts.showPost', ['id' => $request->postId])->with('success', 'Comentario Subido correctamente!');
     }
+
+    public function deletePost($id){
+        $post = Post::findOrFail($id);
+        $post->delete();
+        return redirect()->route('posts.show')->with('success', 'Post eliminado correctamente!');
+    }
+
+    public function deleteComment($id, Request $request){
+        $comment = Comment::findOrFail($id); 
+        $comment->delete(); 
+        return redirect()->route('posts.showPost', ['id' => $request->postId])->with('success', 'Comentario eliminado correctamente!'); 
+    }
 }
