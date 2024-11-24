@@ -8,9 +8,4 @@
 </p>
 
 ## About Project
-Para correr el proyecto debe ejecutar los siguientes comandos
-    - composer install
-    - npm install
-    - Verificar el .env para la base de datos actualmente tiene por nombre (aztro-crud) debe ser Mysql
-    - php artisan migrate
-    - php artisan serve
+Sigue estos pasos para configurar y ejecutar el proyecto: 1. **Instalar las Dependencias de PHP:** ```sh composer install ``` 2. **Instalar las Dependencias de Node.js:** ```sh npm install ``` 3. **Configurar la Base de Datos:** - Abre el archivo `.env` en el directorio raíz del proyecto. - Verifica y configura los siguientes valores para la base de datos: ``` DB_CONNECTION=mysql DB_DATABASE=aztro-crud DB_USERNAME=tu_usuario DB_PASSWORD=tu_contraseña ``` 4. **Ejecutar las Migraciones:** ```sh php artisan migrate ``` 5. **Iniciar el Servidor de Desarrollo:** ```sh php artisan serve ```
